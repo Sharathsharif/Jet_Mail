@@ -64,6 +64,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin_AllUser.aspx" />
+    <Content Include="Admin_HomePage.aspx" />
+    <Content Include="assets\Images\cover1.jpg" />
+    <Content Include="assets\Images\cover2.jpg" />
+    <Content Include="assets\Images\cover3.jpg" />
+    <Content Include="Compose_Mail.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -80,20 +86,139 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
-    <Content Include="Login.aspx" />
-    <Content Include="Register.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Inbox.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="SentMail.aspx" />
+    <Content Include="Starred_mail.aspx" />
+    <Content Include="template\css\animate.css" />
+    <Content Include="template\css\bootstrap.css" />
+    <Content Include="template\css\custom.css" />
+    <Content Include="template\css\export.css" />
+    <Content Include="template\css\font-awesome.css" />
+    <Content Include="template\css\jqcandlestick.css" />
+    <Content Include="template\css\SidebarNav.min.css" />
+    <Content Include="template\css\style.css" />
+    <Content Include="template\fonts\fontawesome-webfont.svg" />
+    <Content Include="template\images\1.jpg" />
+    <Content Include="template\images\2.jpg" />
+    <Content Include="template\images\3.jpg" />
+    <Content Include="template\images\4.jpg" />
+    <Content Include="template\images\a.png" />
+    <Content Include="template\images\i1.png" />
+    <Content Include="template\images\i2.png" />
+    <Content Include="template\images\i3.png" />
+    <Content Include="template\images\i4.png" />
+    <Content Include="template\images\img-sprite.png" />
+    <Content Include="template\images\img1.png" />
+    <Content Include="template\images\lock.png" />
+    <Content Include="template\images\mail.png" />
+    <Content Include="template\images\search-icon.png" />
+    <Content Include="template\images\slider1.jpg" />
+    <Content Include="template\images\slider2.jpg" />
+    <Content Include="template\images\slider3.jpg" />
+    <Content Include="template\images\slider4.jpg" />
+    <Content Include="template\images\slider5.jpg" />
+    <Content Include="template\images\slider6.jpg" />
+    <Content Include="template\images\slider7.jpg" />
+    <Content Include="template\images\tick.png" />
+    <Content Include="template\images\user.png" />
+    <Content Include="template\images\userimage.png" />
+    <Content Include="template\images\weather.jpg" />
+    <Content Include="template\js\amcharts.js" />
+    <Content Include="template\js\bootstrap.js" />
+    <Content Include="template\js\Chart.bundle.js" />
+    <Content Include="template\js\Chart.js" />
+    <Content Include="template\js\Chart.min.js" />
+    <Content Include="template\js\chartinator.js" />
+    <Content Include="template\js\classie.js" />
+    <Content Include="template\js\custom.js" />
+    <Content Include="template\js\export.min.js" />
+    <Content Include="template\js\images\dragIconRoundBig.svg" />
+    <Content Include="template\js\images\lens.svg" />
+    <Content Include="template\js\index.js" />
+    <Content Include="template\js\index1.js" />
+    <Content Include="template\js\index2.js" />
+    <Content Include="template\js\jquery-1.11.1.min.js" />
+    <Content Include="template\js\jquery.flot.js" />
+    <Content Include="template\js\jquery.jqcandlestick.min.js" />
+    <Content Include="template\js\jquery.nicescroll.js" />
+    <Content Include="template\js\light.js" />
+    <Content Include="template\js\metisMenu.min.js" />
+    <Content Include="template\js\modernizr.custom.js" />
+    <Content Include="template\js\monthly.js" />
+    <Content Include="template\js\owl.carousel.js" />
+    <Content Include="template\js\pie-chart.js" />
+    <Content Include="template\js\scripts.js" />
+    <Content Include="template\js\serial.js" />
+    <Content Include="template\js\SidebarNav.min.js" />
+    <Content Include="template\js\SimpleChart.js" />
+    <Content Include="template\js\utils.js" />
+    <Content Include="template\js\validator.min.js" />
+    <Content Include="Trash.aspx" />
+    <Content Include="view_mail.aspx" />
     <Content Include="Web.config" />
-    <Content Include="index.aspx" />
+    <Content Include="Login.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin_AllUser.aspx.cs">
+      <DependentUpon>Admin_AllUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_AllUser.aspx.designer.cs">
+      <DependentUpon>Admin_AllUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_HomePage.aspx.cs">
+      <DependentUpon>Admin_HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_HomePage.aspx.designer.cs">
+      <DependentUpon>Admin_HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Panel.Master.cs">
+      <DependentUpon>Admin_Panel.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Panel.Master.designer.cs">
+      <DependentUpon>Admin_Panel.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Compose_Mail.aspx.cs">
+      <DependentUpon>Compose_Mail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compose_Mail.aspx.designer.cs">
+      <DependentUpon>Compose_Mail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Connect_Method.cs" />
     <Compile Include="Disconnect_Method.cs" />
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inbox.aspx.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inbox.aspx.designer.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.Master.cs">
+      <DependentUpon>HomePage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage.Master.designer.cs">
+      <DependentUpon>HomePage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -101,31 +226,36 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Index.Master.cs">
-      <DependentUpon>Index.Master</DependentUpon>
+    <Compile Include="SentMail.aspx.cs">
+      <DependentUpon>SentMail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Index.Master.designer.cs">
-      <DependentUpon>Index.Master</DependentUpon>
+    <Compile Include="SentMail.aspx.designer.cs">
+      <DependentUpon>SentMail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Starred_mail.aspx.cs">
+      <DependentUpon>Starred_mail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Starred_mail.aspx.designer.cs">
+      <DependentUpon>Starred_mail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
+    <Compile Include="Trash.aspx.cs">
+      <DependentUpon>Trash.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
+    <Compile Include="Trash.aspx.designer.cs">
+      <DependentUpon>Trash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view_mail.aspx.cs">
+      <DependentUpon>view_mail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view_mail.aspx.designer.cs">
+      <DependentUpon>view_mail.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Index.Master" />
     <Content Include="Content\bootstrap.rtl.min.css.map" />
     <Content Include="Content\bootstrap.rtl.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
@@ -142,6 +272,8 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="HomePage.Master" />
+    <Content Include="Admin_Panel.Master" />
     <None Include="packages.config" />
     <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\bootstrap.js.map" />
@@ -149,12 +281,24 @@
     <Content Include="Scripts\bootstrap.esm.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="template\fonts\fontawesome-webfont.eot" />
+    <Content Include="template\fonts\fontawesome-webfont.ttf" />
+    <Content Include="template\fonts\fontawesome-webfont.woff" />
+    <Content Include="template\fonts\fontawesome-webfont.woff2" />
+    <Content Include="template\fonts\FontAwesome.otf" />
+    <Content Include="template\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="template\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="template\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="template\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\ProfileImg\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
