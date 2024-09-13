@@ -128,6 +128,7 @@ namespace Jet_Mail
                 string user = Session["Currentuser"].ToString();
                 string cmd = "Update Inbox set AchieveByReceiver='"+user+"' where Sl_No='" + id + "'";
                 dm.disconnectmethodfn(cmd);
+                showgrid();
             }
 
         }

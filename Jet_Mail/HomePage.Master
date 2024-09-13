@@ -222,7 +222,7 @@
                                 </a>
                                 <ul class="dropdown-menu drp-mnu">
                                     <li visible="false"><a href="#"><i class="fa fa-cog"></i>Settings</a> </li>
-                                    <li><a href="#"><i class="fa fa-user"></i>Change Password</a> </li>
+                                    <li><a href="change_password.aspx"><i class="fa fa-user"></i>Change Password</a> </li>
                                     <li><a href="Profileview.aspx"><i class="fa fa-suitcase"></i>Profile</a> </li>
                                     <li>
                                         <asp:LinkButton ID="LinkButton1" runat="server" href="Home.aspx" OnClick="LinkButton1_Click"><i class="fa fa-sign-out"></i>Logout</asp:LinkButton>> </li>

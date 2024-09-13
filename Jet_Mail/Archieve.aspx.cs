@@ -109,7 +109,7 @@ namespace Jet_Mail
                     string cmd = "Update Inbox set AchieveByReceiver='' where Sl_No='" + id + "'";
                     dm.disconnectmethodfn(cmd);
                 }
-
+                Response.Redirect("Archieve.aspx");
             }
         }
     }

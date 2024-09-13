@@ -71,6 +71,7 @@
     <Content Include="assets\Images\cover1.jpg" />
     <Content Include="assets\Images\cover2.jpg" />
     <Content Include="assets\Images\cover3.jpg" />
+    <Content Include="change_password.aspx" />
     <Content Include="Compose_Mail.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -203,6 +204,13 @@
     </Compile>
     <Compile Include="Archieve.aspx.designer.cs">
       <DependentUpon>Archieve.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="change_password.aspx.cs">
+      <DependentUpon>change_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="change_password.aspx.designer.cs">
+      <DependentUpon>change_password.aspx</DependentUpon>
     </Compile>
     <Compile Include="Compose_Mail.aspx.cs">
       <DependentUpon>Compose_Mail.aspx</DependentUpon>
