@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace Jet_Mail
 {
-    public partial class SentMail : System.Web.UI.Page
+    public partial class Archieve : System.Web.UI.Page
     {
         Disconnect_Method dm = new Disconnect_Method();
         DataSet DS = new DataSet();
@@ -17,17 +17,17 @@ namespace Jet_Mail
         {
             if (!IsPostBack)
             {
-            showgrid();
+                showgrid();
 
             }
         }
         public void showgrid()
         {
             string user = Session["Currentuser"].ToString();
-            
+
             //string user = "sharath@gmail.com";
 
-             string Sent = "exec fetchSent '"+ user + "'";
+            string Sent = "exec Allarchieve '" + user + "'";
             DS = dm.disconnectmethodfn(Sent);
             if (DS.Tables[0].Rows.Count > 0)
             {
@@ -80,7 +80,7 @@ namespace Jet_Mail
         protected void DataList1_UpdateCommand(object source, DataListCommandEventArgs e)
         {
             string user = Session["Currentuser"].ToString();
-           // string user = "sharath@gmail.com"; //Temporary
+            // string user = "sharath@gmail.com"; //Temporary
 
             string id = ((Label)e.Item.FindControl("Label5")).Text;
 
@@ -94,14 +94,23 @@ namespace Jet_Mail
 
         protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
         {
-            if (e.CommandName == "archieve")
+            if (e.CommandName== "undoarchieve")
             {
-                string id = ((Label)e.Item.FindControl("Label5")).Text;
                 string user = Session["Currentuser"].ToString();
-                string cmd = "Update Inbox set AchieveByReceiver='" + user + "' where Sl_No='" + id + "'";
-                dm.disconnectmethodfn(cmd);
-            }
+                string id = ((Label)e.Item.FindControl("Label5")).Text;
+                if (((Label)e.Item.FindControl("Label6")).Text==user)
+                {
+                    string cmd = "Update Inbox set AchieveBySender='' where Sl_No='"+id+"'";
+                    dm.disconnectmethodfn(cmd);
 
+                }
+                if (((Label)e.Item.FindControl("Label7")).Text == user)
+                {
+                    string cmd = "Update Inbox set AchieveByReceiver='' where Sl_No='" + id + "'";
+                    dm.disconnectmethodfn(cmd);
+                }
+
+            }
         }
     }
 }

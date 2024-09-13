@@ -30,6 +30,8 @@
                                         <asp:Label ID="Label7" runat="server" Text='<%# Bind("approval") %>' Visible="false"></asp:Label></h6>
 
                                 </div>
+                                <asp:LinkButton ID="LinkButton4" runat="server" CommandName="Detailsview">
+
                                 <div class="mail mail-name">
                                     <h6>
                                         <asp:Label ID="Label1" runat="server" Text='<%# Bind("Name") %>'></asp:Label></h6>
@@ -38,6 +40,7 @@
                                     <h6>
                                         <asp:Label ID="Label5" runat="server" Text='<%# Bind("Mail") %>'></asp:Label></h6>
                                 </div>
+                                </asp:LinkButton>
 
 
 

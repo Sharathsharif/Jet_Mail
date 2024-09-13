@@ -72,7 +72,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <asp:LinkButton ID="LinkButton1" runat="server"> <i class="fa fa-download mail-icon"></i>Archive</asp:LinkButton>
+                                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandName="archieve"> <i class="fa fa-download mail-icon"></i>Archive</asp:LinkButton>
 
                                                 </li>
                                                 <li>

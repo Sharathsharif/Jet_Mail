@@ -13,6 +13,7 @@ namespace Jet_Mail
 
         Disconnect_Method dm = new Disconnect_Method();
         DataSet DS = new DataSet();
+        string cmd;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -27,13 +28,14 @@ namespace Jet_Mail
         {
             string title = Request.QueryString["tit"];
             Label8.Text = title;
-            string cmd = Request.QueryString["cmd"];
+             cmd = Request.QueryString["cmd"];
             DS = dm.disconnectmethodfn(cmd);
             if (DS.Tables[0].Rows.Count > 0)
             {
                 DataList2.DataSource = DS;
                 DataList2.DataBind();
 
+            }
                 for (int i = 0; i < DataList2.Items.Count; i++)
                 {
                     string status = ((Label)DataList2.Items[i].FindControl("Label7")).Text;
@@ -53,11 +55,7 @@ namespace Jet_Mail
 
                     }
                 }
-            }
-            else
-            {
-                
-            }
+           
 
         }
         protected void DataList2_ItemCommand(object source, DataListCommandEventArgs e)
@@ -70,6 +68,7 @@ namespace Jet_Mail
 
                 string cmd = "exec approve'" + id + "'";
                 dm.disconnectmethodfn(cmd);
+                showgrid();
 
             }
             if (e.CommandName == "Reject")
@@ -80,7 +79,7 @@ namespace Jet_Mail
 
                 string cmd = "exec Reject'" + id + "'";
                 dm.disconnectmethodfn(cmd);
-
+                showgrid();
             }
             if (e.CommandName == "Pending")
 
@@ -90,9 +89,16 @@ namespace Jet_Mail
 
                 string cmd = "exec Pending'" + id + "'";
                 dm.disconnectmethodfn(cmd);
-
+                showgrid();
             }
-            showgrid();
+            if (e.CommandName== "Detailsview")
+            {
+                string id = ((Label)e.Item.FindControl("Label6")).Text;
+
+                Response.Redirect("Admin_UserDetailView.aspx?id="+id);
+            }
+
+            //Response.Redirect("~/Admin_HomePage.aspx?cmd");
 
         }
     }

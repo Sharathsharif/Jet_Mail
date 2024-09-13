@@ -1,6 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomePage.Master" AutoEventWireup="true" CodeBehind="SentMail.aspx.cs" Inherits="Jet_Mail.SentMail" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HomePage.Master" AutoEventWireup="true" CodeBehind="Archieve.aspx.cs" Inherits="Jet_Mail.Archieve" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
 
 
     <!-- main content start-->
@@ -11,10 +10,10 @@
         <div class="col-lg-12 ">
             <div class="panel-default">
                 <div class="panel-heading">
-                    Sent Mail 
+                    Jet Mail 
                 </div>
                 <div class="inbox-page">
-                    <h4>Today</h4>
+                    <h4>Archieved Mail List</h4>
 
                     <asp:DataList ID="DataList1" runat="server" CssClass="table" OnDeleteCommand="DataList1_DeleteCommand" OnEditCommand="DataList1_EditCommand" OnUpdateCommand="DataList1_UpdateCommand" OnItemCommand="DataList1_ItemCommand">
                         <ItemTemplate>
@@ -38,7 +37,9 @@
                                 <div class="mail">
                                     <asp:Image ID="Image1" runat="server" ImageUrl=' <%# Bind("Profile_img") %>' CssClass="small" Style="width:35px; height:30px"/>
                                     <asp:Label ID="Label5" runat="server" Text='<%# Bind("Sl_No") %>' Visible="false"></asp:Label>
-                                     <asp:Label ID="Label6" runat="server" Text='<%# Bind("StarBySender")%>' Visible="false"></asp:Label>
+                                     <asp:Label ID="Label6" runat="server" Text='<%# Bind("AchieveBySender")%>' Visible="false"></asp:Label>
+                                     <asp:Label ID="Label7" runat="server" Text='<%# Bind("AchieveByReceiver")%>' Visible="false"></asp:Label>
+
 
                                     </div>
                                 <div class="mail mail-name">
@@ -63,16 +64,13 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <asp:LinkButton ID="LinkButton1" runat="server" CommandName="archieve"> <i class="fa fa-download mail-icon"></i>
-                                                    Archive</asp:LinkButton>
+                                                <asp:LinkButton ID="LinkButton1" runat="server" CommandName="undoarchieve">
+                                                    <i class="fa fa-download mail-icon"></i> Undo Archive</asp:LinkButton>
                                                 
                                             </li>
                                             <li>
                                                 <asp:LinkButton ID="LinkButton2" runat="server" CommandName="delete"> 
                                                      <i class="fa fa-trash-o mail-icon"></i>Delete</asp:LinkButton>
-                                                
-                                                   
-                                                    
                                                 
                                             </li>
                                         </ul>
@@ -96,4 +94,7 @@
             </div>
         </div>
     </div>
+
+
+
 </asp:Content>

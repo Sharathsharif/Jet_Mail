@@ -18,12 +18,12 @@ namespace Jet_Mail
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string Currentuser ="sharath.ittech@gmail.com";
+           // string Currentuser ="sharath.ittech@gmail.com";
 
-           // string Currentuser = Session["Currentuser"].ToString();
+            string Currentuser = Session["Currentuser"].ToString();
             string date = DateTime.Now.ToString("d MMMM yyyy");
             string Time= DateTime.Now.ToShortTimeString();
-            string submit = "exec sentt '"+Currentuser+"','"+ TextBox1.Text+ "','" + TextBox2.Text+ "','" + TextBox3.Text+ "', '" + date + "', '" + Time + "','" + "" + "','" + "" + "','" + "" + "','" + "" + "','" + "" + "','" + "" + "' ";
+            string submit = "exec sentt '"+Currentuser+"','"+ TextBox1.Text+ "','" + TextBox2.Text+ "','" + TextBox3.Text+ "', '" + date + "', '" + Time + "',  '" + "" + "',  '" + "" + "',  '" + "" + "',  '" + "" + "',  '" + "" + "',  '" + "" + "' ";
             dm.disconnectmethodfn(submit);
             TextBox1.Text = TextBox2.Text = TextBox3.Text = "";
             ClientScript.RegisterStartupScript(GetType(), "", "<script>'alert(Mail Sent Successfully!!!)'</script>");

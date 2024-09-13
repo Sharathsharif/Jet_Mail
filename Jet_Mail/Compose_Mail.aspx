@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="page-wrapper">
         <div class="main-page compose">
-            <div class="col-md-10 compose-right widget-shadow">
+            <div class="col-md-10 compose-right widget-shadow" style="left: 0px; top: 4px; width: 93%">
                 <div class="panel-default">
                     <div class="panel-heading">
                         Compose New Message 

@@ -122,6 +122,13 @@ namespace Jet_Mail
                 Response.Redirect("~/view_mail.aspx");
 
             }
+            if (e.CommandName == "archieve")
+            {
+                string id = ((Label)e.Item.FindControl("Label5")).Text;
+                string user = Session["Currentuser"].ToString();
+                string cmd = "Update Inbox set AchieveByReceiver='"+user+"' where Sl_No='" + id + "'";
+                dm.disconnectmethodfn(cmd);
+            }
 
         }
     }

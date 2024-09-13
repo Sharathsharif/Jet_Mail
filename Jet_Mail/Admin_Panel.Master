@@ -126,6 +126,8 @@
                             <ul class="sidebar-menu">
                                 <li class="header">Admin Panel</li>
                                 <li class="treeview">
+                                    <%--<a href="Admin_AllUser.aspx?cmd=exec viewusers">--%>
+
                                     <a href="Admin_AllUser.aspx?cmd=exec viewusers">
                                         <i class="fa fa-pencil-square" aria-hidden="true"></i><span>List Of All Users</span>
                                     </a>

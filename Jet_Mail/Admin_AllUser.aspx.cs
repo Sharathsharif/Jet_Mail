@@ -89,6 +89,8 @@ namespace Jet_Mail
                 dm.disconnectmethodfn(cmd);
 
             }
+
+
             showgrid();
 
         }
